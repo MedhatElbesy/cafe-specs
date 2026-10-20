@@ -1,0 +1,13 @@
+version: 1
+project:
+  name: rashfa
+  primaryLanguage: typescript
+  projectRoots:
+    - .
+tracker:
+  type: jira
+  workspace: yomnaarafahammad-1791369924187.atlassian.net
+naming:
+  includeTrackerId: true
+  globalSequence: true
+agents: []
