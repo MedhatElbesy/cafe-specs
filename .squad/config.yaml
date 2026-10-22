@@ -11,3 +11,40 @@ naming:
   includeTrackerId: true
   globalSequence: true
 agents: []
+planner:
+  enabled: true
+  provider: openai
+  mode: auto
+  auth:
+    anthropic: auto
+  budget:
+    maxFileReads: 25
+    maxContextBytes: 50000
+    maxDurationSeconds: 180
+  cache:
+    enabled: true
+  maxOutputTokens: 16384
+  stages:
+    scout:
+      enabled: true
+#      modelOverride: gpt-5-mini
+      maxFiles: 12
+      maxOutputTokens: 2048
+  tools:
+    grep: true
+    listDir: true
+    rangedRead: true
+  validation:
+    enabled: true
+    strict: false
+  runtime:
+    anthropic: agent-sdk
+  providerOptions:
+    anthropic:
+      thinking: adaptive
+      effort: medium
+      effortByPhase:
+        scout: minimal
+        draft: medium
+  modelOverride:
+#    openai: gpt-5-mini
