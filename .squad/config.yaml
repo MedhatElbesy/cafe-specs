@@ -27,7 +27,6 @@ planner:
   stages:
     scout:
       enabled: true
-#      modelOverride: gpt-5-mini
       maxFiles: 12
       maxOutputTokens: 2048
   tools:
@@ -46,5 +45,3 @@ planner:
       effortByPhase:
         scout: minimal
         draft: medium
-  modelOverride:
-#    openai: gpt-5-mini
